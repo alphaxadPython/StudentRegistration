@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="532.0" prefWidth="860.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="studentregistration.DashboardController">
+<AnchorPane id="AnchorPane" prefHeight="420.0" prefWidth="860.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="studentregistration.DashboardController">
    <children>
       <MenuBar layoutX="122.0" layoutY="44.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
@@ -29,10 +33,146 @@
           </Menu>
         </menus>
       </MenuBar>
-      <ImageView fitHeight="488.0" fitWidth="415.0" layoutX="10.0" layoutY="35.0" pickOnBounds="true">
+      <ImageView fitHeight="379.0" fitWidth="360.0" layoutX="9.0" layoutY="35.0" pickOnBounds="true">
          <image>
-            <Image url="@image/bg.jpg" />
+            <Image url="@image/reda2.jpg" />
          </image>
       </ImageView>
+      <Label layoutX="516.0" layoutY="36.0" text="Student Profile" textFill="#2369a1">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="392.0" layoutY="87.0" text="Students Information:" textFill="#2369a1">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="393.0" layoutY="113.0" prefHeight="4.0" prefWidth="188.0" />
+      <Separator layoutX="362.0" layoutY="35.0" orientation="VERTICAL" prefHeight="373.0" prefWidth="14.0" />
+      <Label layoutX="393.0" layoutY="128.0" text="Fullname" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="480.0" layoutY="127.0" text="Alpha Jozee" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="393.0" layoutY="154.0" text="region:" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="480.0" layoutY="153.0" text="Alpha Jozee" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="393.0" layoutY="182.0" text="Gender:" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="480.0" layoutY="181.0" text="Alpha Jozee" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="628.0" layoutY="185.0" text="Parent Informations:" textFill="#2369a1">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="629.0" layoutY="226.0" text="Fullname" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="716.0" layoutY="225.0" text="Alpha Jozee" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="629.0" layoutY="252.0" text="Relation:" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="716.0" layoutY="251.0" text="Alpha Jozee" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="629.0" layoutY="278.0" text="Phone:" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="716.0" layoutY="277.0" text="Alpha Jozee" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="629.0" layoutY="306.0" text="Email:" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="716.0" layoutY="305.0" text="Alpha Jozee" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="628.0" layoutY="208.0" prefHeight="4.0" prefWidth="177.0" />
+      <Label layoutX="393.0" layoutY="212.0" text="Reg No:" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="480.0" layoutY="211.0" text="Alpha Jozee" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="393.0" layoutY="239.0" text="Birt Date:" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="480.0" layoutY="238.0" text="Alpha Jozee" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="629.0" layoutY="89.0" text="Parent Informations:" textFill="#2369a1">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="630.0" layoutY="130.0" text="Fullname" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="717.0" layoutY="129.0" text="Alpha Jozee" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="629.0" layoutY="112.0" prefHeight="4.0" prefWidth="177.0" />
+      <Label layoutX="630.0" layoutY="156.0" text="Fullname" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="717.0" layoutY="155.0" text="Alpha Jozee" textFill="#0a3d62">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="397.0" layoutY="290.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="177.0" style="-fx-background-color: #2369a1;" text="Update Profile" textFill="WHITE" />
+      <Separator layoutX="512.0" layoutY="66.0" prefHeight="4.0" prefWidth="177.0" />
    </children>
 </AnchorPane>
