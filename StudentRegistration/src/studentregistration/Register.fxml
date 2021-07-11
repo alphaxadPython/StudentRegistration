@@ -15,8 +15,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="825.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="825.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentregistration.RegisterController">
    <children>
       <ImageView fitHeight="437.0" fitWidth="340.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
@@ -28,13 +27,13 @@
             <Font name="Arial Bold" size="23.0" />
          </font>
       </Label>
-      <TabPane layoutX="353.0" layoutY="53.0" prefHeight="355.0" prefWidth="460.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="regTab" layoutX="353.0" layoutY="53.0" prefHeight="355.0" prefWidth="460.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="student">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="286.0" prefWidth="460.0" style="-fx-background-color: white;">
                      <children>
-                        <Button layoutX="371.0" layoutY="280.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="67.0" style="-fx-background-color: #2369a1;" text="NEXT" textFill="WHITE" />
+                        <Button layoutX="371.0" layoutY="280.0" mnemonicParsing="false" onAction="#saveStdentIfo" prefHeight="33.0" prefWidth="67.0" style="-fx-background-color: #2369a1;" text="NEXT" textFill="WHITE" />
                         <Label layoutX="14.0" layoutY="10.0" text="Students Information:" textFill="#2369a1">
                            <font>
                               <Font name="Arial Bold" size="18.0" />
@@ -46,13 +45,13 @@
                               <Font name="Arial Bold" size="12.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="14.0" layoutY="73.0" prefHeight="27.0" prefWidth="209.0" promptText="First Name" />
+                        <TextField fx:id="fullname" layoutX="14.0" layoutY="73.0" prefHeight="27.0" prefWidth="209.0" promptText="First Name" />
                         <Label layoutX="17.0" layoutY="120.0" text="Region" textFill="#0a3d62">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="17.0" layoutY="145.0" prefHeight="27.0" prefWidth="209.0" promptText="Middle Name" />
+                        <TextField fx:id="region" layoutX="17.0" layoutY="145.0" prefHeight="27.0" prefWidth="209.0" promptText="Middle Name" />
                         <Label layoutX="240.0" layoutY="47.0" text="Birth Date" textFill="#0a3d62">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
@@ -63,14 +62,14 @@
                               <Font name="Arial Bold" size="12.0" />
                            </font>
                         </Label>
-                        <DatePicker layoutX="236.0" layoutY="72.0" prefHeight="27.0" prefWidth="217.0" promptText="Birth Date" />
-                        <ComboBox layoutX="236.0" layoutY="145.0" prefHeight="27.0" prefWidth="216.0" promptText="choose.." />
+                        <DatePicker fx:id="Bdate" layoutX="236.0" layoutY="72.0" prefHeight="27.0" prefWidth="217.0" promptText="Birth Date" />
+                        <ComboBox fx:id="gender" layoutX="236.0" layoutY="145.0" prefHeight="27.0" prefWidth="216.0" promptText="choose.." />
                         <Label layoutX="17.0" layoutY="199.0" text="Registration No" textFill="#0a3d62">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="17.0" layoutY="224.0" prefHeight="27.0" prefWidth="209.0" promptText="RegNo" />
+                        <TextField fx:id="regNo" layoutX="17.0" layoutY="224.0" prefHeight="27.0" prefWidth="209.0" promptText="RegNo" />
                      </children>
                   </AnchorPane>
             </content>
@@ -79,7 +78,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="286.0" prefWidth="460.0" style="-fx-background-color: white;">
                      <children>
-                        <Button layoutX="371.0" layoutY="280.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="67.0" style="-fx-background-color: #2369a1;" text="NEXT" textFill="WHITE" />
+                        <Button layoutX="371.0" layoutY="280.0" mnemonicParsing="false" onAction="#saveParentInfo" prefHeight="33.0" prefWidth="67.0" style="-fx-background-color: #2369a1;" text="NEXT" textFill="WHITE" />
                         <Label layoutX="14.0" layoutY="10.0" text="Parents Informations:" textFill="#2369a1">
                            <font>
                               <Font name="Arial Bold" size="18.0" />
@@ -91,26 +90,26 @@
                               <Font name="Arial Bold" size="12.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="14.0" layoutY="73.0" prefHeight="27.0" prefWidth="209.0" promptText="First Name" />
+                        <TextField fx:id="parentFullname" layoutX="14.0" layoutY="73.0" prefHeight="27.0" prefWidth="209.0" promptText="First Name" />
                         <Label layoutX="239.0" layoutY="120.0" text="Email" textFill="#0a3d62">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="239.0" layoutY="145.0" prefHeight="27.0" prefWidth="209.0" promptText="email@example.com" />
+                        <TextField fx:id="email" layoutX="239.0" layoutY="145.0" prefHeight="27.0" prefWidth="209.0" promptText="email@example.com" />
                         <Label layoutX="240.0" layoutY="47.0" text="Phone" textFill="#0a3d62">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
                            </font>
                         </Label>
-                        <DatePicker layoutX="236.0" layoutY="72.0" prefHeight="27.0" prefWidth="217.0" promptText="phone number" />
-                        <Button layoutX="19.0" layoutY="280.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="67.0" style="-fx-background-color: #3c6382;" text="BACK" textFill="WHITE" />
+                        <Button layoutX="19.0" layoutY="280.0" mnemonicParsing="false" onAction="#goBackTostudent" prefHeight="33.0" prefWidth="67.0" style="-fx-background-color: #3c6382;" text="BACK" textFill="WHITE" />
                         <Label layoutX="13.0" layoutY="119.0" text="Relationship" textFill="#0a3d62">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
                            </font>
                         </Label>
-                        <ComboBox layoutX="12.0" layoutY="143.0" prefHeight="27.0" prefWidth="216.0" promptText="choose.." />
+                        <ComboBox fx:id="relationship" layoutX="12.0" layoutY="143.0" prefHeight="27.0" prefWidth="216.0" promptText="choose.." />
+                        <TextField fx:id="phone" layoutX="239.0" layoutY="73.0" prefHeight="27.0" prefWidth="209.0" promptText="email@example.com" />
                      </children>
                   </AnchorPane>
                </content>
@@ -119,7 +118,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="286.0" prefWidth="460.0" style="-fx-background-color: white;">
                      <children>
-                        <Button layoutX="371.0" layoutY="280.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="67.0" style="-fx-background-color: #00a8ff;" text="SUBMIT" textFill="WHITE" />
+                        <Button fx:id="submit" layoutX="371.0" layoutY="280.0" mnemonicParsing="false" onAction="#submitInfo" prefHeight="33.0" prefWidth="67.0" style="-fx-background-color: #00a8ff;" text="SUBMIT" textFill="WHITE" />
                         <Label layoutX="14.0" layoutY="10.0" text="Course Information:" textFill="#2369a1">
                            <font>
                               <Font name="Arial Bold" size="18.0" />
@@ -131,7 +130,7 @@
                               <Font name="Arial Bold" size="12.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="14.0" layoutY="73.0" prefHeight="27.0" prefWidth="209.0" promptText="First Name" />
+                        <TextField fx:id="year" layoutX="14.0" layoutY="73.0" prefHeight="27.0" prefWidth="209.0" promptText="First Name" />
                         <Label layoutX="17.0" layoutY="120.0" text="Password" textFill="#0a3d62">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
@@ -142,15 +141,15 @@
                               <Font name="Arial Bold" size="12.0" />
                            </font>
                         </Label>
-                        <ComboBox layoutX="236.0" layoutY="73.0" prefHeight="27.0" prefWidth="216.0" promptText="choose.." />
-                        <PasswordField layoutX="13.0" layoutY="147.0" prefHeight="27.0" prefWidth="208.0" promptText="password" />
+                        <ComboBox fx:id="course" layoutX="236.0" layoutY="73.0" prefHeight="27.0" prefWidth="216.0" promptText="choose.." />
+                        <PasswordField fx:id="password1" layoutX="13.0" layoutY="147.0" prefHeight="27.0" prefWidth="208.0" promptText="password" />
                         <Label layoutX="247.0" layoutY="118.0" text="Confirm Password" textFill="#0a3d62">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
                            </font>
                         </Label>
-                        <PasswordField layoutX="243.0" layoutY="145.0" prefHeight="27.0" prefWidth="208.0" promptText="confirm password" />
-                        <Button layoutX="20.0" layoutY="280.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="67.0" style="-fx-background-color: #3c6382;" text="BACK" textFill="WHITE" />
+                        <PasswordField fx:id="password2" layoutX="243.0" layoutY="145.0" prefHeight="27.0" prefWidth="208.0" promptText="confirm password" />
+                        <Button layoutX="20.0" layoutY="280.0" mnemonicParsing="false" onAction="#goBackToParent" prefHeight="33.0" prefWidth="67.0" style="-fx-background-color: #3c6382;" text="BACK" textFill="WHITE" />
                      </children>
                   </AnchorPane>
                </content>
