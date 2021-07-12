@@ -171,7 +171,7 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </Label>
-      <Button layoutX="397.0" layoutY="290.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="177.0" style="-fx-background-color: #2369a1;" text="Update Profile" textFill="WHITE" />
+      <Button layoutX="397.0" layoutY="290.0" mnemonicParsing="false" onAction="#updateProfile" prefHeight="33.0" prefWidth="177.0" style="-fx-background-color: #2369a1;" text="Update Profile" textFill="WHITE" />
       <Separator layoutX="512.0" layoutY="66.0" prefHeight="4.0" prefWidth="177.0" />
    </children>
 </AnchorPane>
