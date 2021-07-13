@@ -41,11 +41,10 @@ public class course extends StudentInfo {
         this.Course = Course;
         this.pass = pass;
     }
-    
+
 //    register course info here
-    
-    public void courseInfo(){
-         try (Connection conn = DBconnection.getConnection()) {
+    public void courseInfo() {
+        try (Connection conn = DBconnection.getConnection()) {
 
             // insert query
             String query = " insert into course (student, course, year, password) values (?, ?, ?, ?)";
@@ -63,6 +62,29 @@ public class course extends StudentInfo {
             System.out.println("Cannot connect the database!" + e.getMessage());
         }
         System.out.println("Data has been sent to course table");
+    }
+
+//    updating course
+    public void updateCourse() {
+        try (Connection conn = DBconnection.getConnection()) {
+
+            // insert query
+            String query = " update course set student=?, course=?, year=?, password=? where student=?";
+            // Create the mysql insert prepared statement
+            PreparedStatement preparedStmt = conn.prepareStatement(query);
+            preparedStmt.setString(1, name);
+            preparedStmt.setString(2, Course);
+            preparedStmt.setString(3, Year);
+            preparedStmt.setString(4, pass);
+            preparedStmt.setString(5, name);
+
+            // Execute the preparedstatement
+            preparedStmt.execute();
+            conn.close();
+        } catch (SQLException e) {
+            System.out.println("Cannot connect the database!" + e.getMessage());
+        }
+        System.out.println("updated course");
     }
 
 }

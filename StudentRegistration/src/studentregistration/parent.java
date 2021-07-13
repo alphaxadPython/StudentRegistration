@@ -42,16 +42,17 @@ public class parent extends StudentInfo {
         this.name = name;
     }
 //constructor
+
     public parent(String name, String relation, String phone, String email) {
         this.name = name;
         this.relation = relation;
         this.phone = phone;
         this.email = email;
     }
-    
+
 //    register Parent Info here
-    public void perentInfo(){
-          try (Connection conn = DBconnection.getConnection()) {
+    public void perentInfo() {
+        try (Connection conn = DBconnection.getConnection()) {
 
             // insert query
             String query = " insert into parent (student, fullname, realation, phone, email) values (?, ?, ?, ?, ?)";
@@ -72,4 +73,27 @@ public class parent extends StudentInfo {
         System.out.println("Data has been sent to parent table");
     }
 
+//    updating parent
+    public void UpdateParent() {
+        try (Connection conn = DBconnection.getConnection()) {
+
+            // insert query
+            String query = " update parent set student=?, fullname=?, realation=?, phone=?, email=? where student=?";
+            // Create the mysql insert prepared statement
+            PreparedStatement preparedStmt = conn.prepareStatement(query);
+            preparedStmt.setString(1, name);
+            preparedStmt.setString(2, name);
+            preparedStmt.setString(3, relation);
+            preparedStmt.setString(4, phone);
+            preparedStmt.setString(5, email);
+            preparedStmt.setString(6, name);
+
+            // Execute the preparedstatement
+            preparedStmt.execute();
+            conn.close();
+        } catch (SQLException e) {
+            System.out.println("Cannot connect the database!" + e.getMessage());
+        }
+        System.out.println("updated parent");
+    }
 }

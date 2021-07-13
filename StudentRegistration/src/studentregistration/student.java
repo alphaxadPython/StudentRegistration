@@ -83,4 +83,29 @@ public class student extends StudentInfo {
         System.out.println("Data has been sent to student tabl");
     }
 
+    
+//    update student info
+    public void updateStudent() {
+        try (Connection conn = DBconnection.getConnection()) {
+
+            // insert query
+            String query = " update student set fullname=?, region=?, date=?, gender=?, regno=? where fullname=? ";
+            // Create the mysql insert prepared statement
+            PreparedStatement preparedStmt = conn.prepareStatement(query);
+            preparedStmt.setString(1, name);
+            preparedStmt.setString(2, region);
+            preparedStmt.setDate(3, BOD);
+            preparedStmt.setString(4, gender);
+            preparedStmt.setString(5, regNo);
+            preparedStmt.setString(6, name);
+
+            // Execute the preparedstatement
+            preparedStmt.execute();
+            conn.close();
+        } catch (SQLException e) {
+            System.out.println("Cannot connect the database!" + e.getMessage());
+        }
+        System.out.println("Data has been sent to student tabl");
+    }
+
 }
